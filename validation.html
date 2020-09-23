@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registor Form</title>
+    <script>
+        function validate(){
+            var name=document.getElementById('name').value;
+            var password=document.getElementById('password').value;
+            var email=document.getElementById('email').value;
+            var phone=document.getElementById('phone').value;
+
+            var nameList=['prathi','ganavi','thanu','sandy','poorva'];
+            
+            if(!(name.match(/^[A-Za-z]+$/)) || name.length<5 || name.length>15)
+            {
+                alert("Name cannot be empty or number or less than 3 or greater than 15");
+                document.getElementById('name').focus();
+            }
+            else if(!(password.match(/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/)))
+            {
+                alert("password must contain upper case, lower case, special character");
+                document.getElementById('password').focus();
+            }
+            else if(isNaN(phone) || phone.length!=10 )
+            {
+                alert("Phone number cannot be null or string and should be 10 digits");
+                document.getElementById('phone').focus();
+            }
+            else{
+        for (i=0;i<nameList.length;i++)
+        { 
+            if(name == nameList[i]) 
+            {
+                alert("User already Exists");
+                document.getElementById("myform").focus();
+            }
+        }
+		alert("You are registered")
+
+		document.getElementById("myform").innerHTML="sucessfully registered "+name;
+        
+	}
+        }    
+            
+           
+            
+    </script>
+</head>
+<body>
+    <form  id="myform" >
+        User Name:<input type="text" id="name"><br>        
+        Password:<input type="password" id="password"><br><br>
+        Email:<input type="email" id="email"><br><br>
+        Phone Number:<input type="text" id="phone"><br><br>
+        <input type="button" value="register" onclick="validate();" >
+        
+        
+    </form>
+</body>
+<div id="print"></div>
+</html>
