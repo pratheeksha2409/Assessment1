@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List drop-down</title>
+    <script>
+      function Device(){
+          var name = document.getElementById("myList").value;
+          if(name == "Laptop")
+          {
+              var studentName = ['HP','Lenovo','Mac','Dell'];
+              document.getElementById("display").innerHTML = studentName.join("<br>");
+          }
+          else if(name == "Mobile")
+          {
+              var studentName = ['OnePlus','Sumsung', 'Oppo', 'Vivo'];
+              document.getElementById("display").innerHTML = studentName.join("<br>");
+          }
+          else if(name == "TV")
+          {
+              var studentName = ['LG','Philips','TCL',' Sony'];
+              document.getElementById("display").innerHTML = studentName.join("<br>");
+          }
+             
+      }
+  </script>
+</head>
+<body>
+    <h2 style="background-color: coral; font-style: italic;">The Class Names List</h2>
+    <div>Select the Device <select name="list" id="myList" onchange="Device()">
+            <option selected="" value="Default">------Select-----</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Mobile">Mobile</option>
+            <option value="TV">TV</option>
+        </select>
+    </div>
+    <br>
+    <div style="background-color:lightgreen"> <span id="display"></span></div>
+
+</body>
+</html>
