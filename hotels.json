@@ -1,0 +1,33 @@
+[
+    {
+        "name":"Indhu",
+        "city":"Mysore",
+        "type":"Veg",
+        "cuisine":["Indian","Chineese"]
+    },
+    {
+        "name":"Akshay palace",
+        "city":"Bangalore",
+        "type":"Nonveg",
+        "cuisine":["Indian","Chineese","Northindian"]
+    },
+    {
+        "name":"Mythri",
+        "city":"Chennai",
+        "type":"Veg",
+        "cuisine":["Indian","Chineese"]
+    },
+    {
+        "name":"Vishnupriya",
+        "city":"Mysore",
+        "type":"Nonveg",
+        "cuisine":["Indian","Chineese"]
+    },
+    {
+        "name":"Vishnupriya",
+        "city":"Mysore",
+        "type":"Nonveg",
+        "cuisine":["Northindian"]
+    }
+    
+    ]

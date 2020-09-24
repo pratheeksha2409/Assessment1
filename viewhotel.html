@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//          function ajaxFunction(){
+// 		ajaxRequest = new XMLHttpRequest();   // opera ,mozilla
+//         // target = document.getElementById("userid"); 
+//         var city=document.getElementById("city").value;
+//         var url = "http://localhost:3000/hotelbycity/?city= "+city; 
+//         ajaxRequest.open("GET", url, true); 
+//         ajaxRequest.send(null); 
+//         ajaxRequest.onreadystatechange = processRequest;
+//       }
+//  function processRequest() {
+//   if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) { 
+//       document.getElementById("myid").innerHTML=ajaxRequest.responseText;
+//   }
+//  }
+    </script>
+</head>
+<body>
+
+      <!-- Enter City:<input type="text" name="city" id="city">
+            <input type="button" name="hotelsByCity" value="hotelbycity" onclick="ajaxFunction()"><br>
+<div id="myid"></div>
+    <form action= "http://localhost:3000/listofhotels"  method="GET">
+       Click To View Hotels: <input type="submit" name="listOfHotels" value="listofhotels" ><br>
+    </form> -->
+
+
+
+    <form action="http://localhost:3000/hotelbycity" method="GET">
+    Enter City:<input type="text" name="city">
+        <input type="submit" name="hotelsByCity" value="hotelbycity"><br>
+    </form>
+
+<br>
+
+<form action="http://localhost:3000/hotelbytype" method="GET">
+    <select  name="type" >
+    <option selected="" value="default">---Hotels by Type---</option>
+    <option value="Veg" >Veg</option>
+    <option value="Nonveg" >Non-Veg</option>
+    <input type="submit" value="search">
+    </select>
+    </form>
+
+    <br><br>
+<form action="http://localhost:3000/hotelbycuisine" method="GET">
+    <select  name="cuisine" >
+        <option selected="" value="default">---Hotels by Cuisine---</option>
+        <option value="Indian">Indian</option>
+        <option value="Chineese">Chineese</option>
+        <option value="Northindian">North Indian</option>
+       
+        <input type="submit" value="search">
+        </select>
+</form>
+    
+<div id="print"></div>
+
+</body>
+</html>
